@@ -42,7 +42,7 @@ export default function InputFields() {
       name: "First",
       icon: PermIdentity,
       placeholder: "John",
-      size: 4,
+      size: 10,
       required: true
     },
     {
@@ -50,14 +50,14 @@ export default function InputFields() {
       name: "Last",
       icon: PermIdentity,
       placeholder: "Doe",
-      size: 4
+      size: 10
     },
     {
       title: "Email",
       name: "Email",
       icon: Email,
       placeholder: "JohnnyD@website.com",
-      size: 8,
+      size: 10,
       required: true,
       helperText: "A valid email is required"
     },
@@ -67,7 +67,7 @@ export default function InputFields() {
       type: "multiline",
       icon: Message,
       placeholder: "Type your message here!",
-      size: 8
+      size: 10
     }
   ];
 
@@ -123,7 +123,7 @@ export default function InputFields() {
 
   const classes = useStyles();
   return (
-    <Grid container justify="center" spacing={3}>
+    <Grid container justify="center" spacing={4}>
       {inputTypes.map(inputField => {
         let { name, title, type, icon, size, helperText } = inputField;
         return (

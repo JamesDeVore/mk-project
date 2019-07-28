@@ -12,10 +12,10 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
   root: {
     background: "#46637f",
-    height:"100vh"
+    minHeight:"100vh"
   },
   paper: {
-    padding:32,
+    padding:36,
   }
 });
 
