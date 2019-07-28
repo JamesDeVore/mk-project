@@ -1,13 +1,12 @@
 import React from 'react';
 import '../styles/App.css';
+//my components
 import InputFields from './InputFields'
 import TopBar from './Topbar'
-
+//ui stuff
 import Paper from "@material-ui/core/Paper"
 import Typography from "@material-ui/core/Typography"
 import Container from "@material-ui/core/Container";
-import Button from "@material-ui/core/Button"
-
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
@@ -33,7 +32,7 @@ function MainForm() {
           <hr />
           <Typography variant="subtitle1" align="center" gutterBottom>
             Enter your name, email, and a personalized message to send an
-            email with your very own message!
+            email with your very own message using AWS lambda functions, and store them in a DynamoDB!
           </Typography>
           <InputFields />
         </Paper>

@@ -2,12 +2,14 @@ import {useState} from 'react'
 
 const useInput = callback => {
 
-  const [values, setValues] = useState({
-    Email:"",
-    First:"",
-    Last:"",
-    Message:""
-  })
+  const blankVals = {
+    Email: "",
+    First: "",
+    Last: "",
+    Message: ""
+  };
+
+  const [values, setValues] = useState(blankVals)
 
   //instead of having many smaller hooks, this custom hook bundles all of my inputs together
   const handleChange = (event) => {
@@ -17,14 +19,15 @@ const useInput = callback => {
       ...values,[event.target.name]: event.target.value
     }));
   }
-  const handleSubmit = event =>  {
-    callback()
+
+  const clearValues = event => {
+    setValues(blankVals)
   }
 
   return {
     handleChange,
-    handleSubmit,
-    values
+    values,
+    clearValues
   }
 }
 
