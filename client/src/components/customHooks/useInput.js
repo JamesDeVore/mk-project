@@ -2,7 +2,12 @@ import {useState} from 'react'
 
 const useInput = callback => {
 
-  const [values, setValues] = useState({})
+  const [values, setValues] = useState({
+    Email:"",
+    First:"",
+    Last:"",
+    Message:""
+  })
 
   //instead of having many smaller hooks, this custom hook bundles all of my inputs together
   const handleChange = (event) => {
